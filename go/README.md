@@ -1,4 +1,4 @@
-# Twitch Authentication Node Sample
+# Twitch Authentication Go Sample
 Here you will find a simple Go web app illustrating how to authenticate Twitch API calls using the OAuth authorization code flow.  This sample uses [Gorilla Sessions](https://godoc.org/github.com/gorilla/sessions) and [Gorilla Mux](https://godoc.org/github.com/gorilla/mux).
 
 ## Installation
