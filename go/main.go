@@ -25,6 +25,7 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/gorilla/sessions"
 	"golang.org/x/oauth2"
+	"golang.org/x/oauth2/twitch"
 )
 
 func init() {
@@ -41,10 +42,7 @@ var (
 		ClientID:     "<YOUR CLIENT ID HERE>",     // The client ID assigned when you created your application
 		ClientSecret: "<YOUR CLIENT SECRET HERE>", // The client secret assigned when you created your application
 		Scopes:       []string{"user_read"},       // The scopes you would like to request
-		Endpoint: oauth2.Endpoint{
-			AuthURL:  "https://api.twitch.tv/kraken/oauth2/authorize",
-			TokenURL: "https://api.twitch.tv/kraken/oauth2/token",
-		},
+		Endpoint:     twitch.Endpoint,
 	}
 	sessionSecret = []byte("<SOME SECRET HERE>")
 
